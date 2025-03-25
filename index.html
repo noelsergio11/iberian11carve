@@ -112,9 +112,9 @@
 								<ul class="icons">
 									<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
 									<li><a href="https://www.tiktok.com/@iberiancarve" class="icon brands fa-tiktok" target="_blank" rel="noopener noreferrer"><span class="label">TikTok</span></a></li>
-									<li><a href="mailto:iberian11carve@gmail.com" class="icon solid fa-envelope" target="_blank" rel="noopener noreferrer"><span class="label">Email</span></a></li>
-                                                                        <li><a href="https://wa.me/19548700675?text=Hi,%20I'm%20interested%20in%20your%20services!" class="icon brands fa-whatsapp" target="_blank" rel="noopener noreferrer"><span class="label">Whatsapp</span></a></li>
-									<li><a href="tel:+19548700675" class="icon solid fa-phone" target="_blank" rel="noopener noreferrer"><span class="label">Call</span></a></li>
+									<li><a href="mailto:iberian11carve@gmail.com" class="icon solid fa-envelope" id="email-btn" target="_blank" rel="noopener noreferrer"><span class="label">Email</span></a></li>
+                                                                        <li><a href="https://wa.me/19548700675?text=Hi,%20I'm%20interested%20in%20your%20services!" class="icon brands fa-whatsapp" id="whatsapp-btn" target="_blank" rel="noopener noreferrer"><span class="label">Whatsapp</span></a></li>
+									<li><a href="tel:+19548700675" class="icon solid fa-phone" id="phone-btn" target="_blank" rel="noopener noreferrer"><span class="label">Call</span></a></li>
 								</ul>
 							</article>
 
@@ -378,12 +378,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		        <!-- Event snippet for Contact conversion page -->
+		        <!-- Conversion tracking events -->
                         <script>
-                         gtag('event', 'conversion', {
-                         'send_to': 'AW-16951321725/M34QC2Mgaha8aEP3I8gpM_'
-                         });
+                        // WhatsApp
+                        document.getElementById('whatsapp-btn')?.addEventListener('click', function () {gtag('event', 'conversion', {'send_to': 'AW-16951321725/M34QC2Mgaha8aEP3I8gpM_'});});
+                        // Email
+                        document.getElementById('email-btn')?.addEventListener('click', function () {gtag('event', 'conversion', {'send_to': 'AW-16951321725/M34QC2Mgaha8aEP3I8gpM_'});});
+                        // Phone
+                        document.getElementById('phone-btn')?.addEventListener('click', function () {gtag('event', 'conversion', {'send_to': 'AW-16951321725/M34QC2Mgaha8aEP3I8gpM_'});});
                         </script>
+
 
 	</body>
 </html>
